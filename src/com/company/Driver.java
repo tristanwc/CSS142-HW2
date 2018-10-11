@@ -35,8 +35,8 @@ public class Driver {
     }
 
     public static double computeDiscount(Scanner input) {
-        System.out.println("Enter the pass phrase: "); 
-        double discount; //Variables declared
+        System.out.println("Enter the pass phrase: ");
+        double discount; //Variables declared and initialized
         int val = 0;
         String phrase = input.next(); //Gets phrasekey
 

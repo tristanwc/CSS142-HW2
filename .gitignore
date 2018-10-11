@@ -65,9 +65,13 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 .idea/vcs.xml
+<<<<<<< HEAD
 .idea/workspace.xml
 .idea/workspace.xml
 
+=======
+.idea/workspace.xmlce.xml
+>>>>>>> ea3d428c5a2b1490678ccf7d8e31c3a26b5561a4
 mv .idea ../.idea_backup
 rm .idea # in case you forgot to close your IDE
 git rm -r .idea 

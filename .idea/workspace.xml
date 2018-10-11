@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0b87277-c848-40fc-a52e-fb1e83b53196" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/com/company/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Driver.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homework2/com/company/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/homework2/com/company/Main.class" beforeDir="false" />
+>>>>>>> d2ea16cb6e428ac7f318ca83fd4d92eda5f57dc0
+>>>>>>> ea3d428c5a2b1490678ccf7d8e31c3a26b5561a4
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,14 +48,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="gitignore" value="9" />
           <entry key="java" value="27" />
+=======
+          <entry key="java" value="42" />
+>>>>>>> ea3d428c5a2b1490678ccf7d8e31c3a26b5561a4
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="JAVA" value="27" />
           <entry key="PLAIN_TEXT" value="9" />
+=======
+          <entry key="JAVA" value="42" />
+>>>>>>> ea3d428c5a2b1490678ccf7d8e31c3a26b5561a4
         </counts>
       </usages-collector>
     </session>
@@ -55,8 +73,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="527">
+              <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+=======
             <state relative-caret-position="-2329">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
+>>>>>>> d2ea16cb6e428ac7f318ca83fd4d92eda5f57dc0
             </state>
           </provider>
         </entry>
@@ -109,7 +132,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539242677962" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539242747689" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -197,8 +220,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="527">
+          <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+=======
         <state relative-caret-position="-2329">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+>>>>>>> d2ea16cb6e428ac7f318ca83fd4d92eda5f57dc0
         </state>
       </provider>
     </entry>
