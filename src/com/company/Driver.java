@@ -203,7 +203,6 @@ public class Driver {
             System.out.println(val);
             return val;
         }
-
     }
 
     public static double computeTip(Scanner b) {
