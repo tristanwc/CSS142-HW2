@@ -207,7 +207,7 @@ public class Driver {
     public static double computeTip(Scanner b) {
         System.out.println("Enter tip amount (abs val): "); //Asks for real number absolute tip
         double val = b.nextDouble();
-        if (val < 0 || val > 100)
+        if (val < 0 || val > 100) //If tip is greater than 100 or less than 0
             return 25; //Sets to 25
 
         val = Math.round(val * 100.00) / 100;
