@@ -200,7 +200,6 @@ public class Driver {
         } else {
             val /= 100;
             val = Math.round(val * 100.00) / 100.00;
-            System.out.println(val);
             return val;
         }
     }
