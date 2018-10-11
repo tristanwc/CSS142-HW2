@@ -47,12 +47,13 @@ public class Driver {
     }
     public static double computeTax(Scanner input) {
        String state = input.next();
-       double taxRate = 15;
+       double taxRate = 15.0;
        switch (taxRate) {
            case 1: state = "AL";
            taxRate = 9.10;
            break;
-           case 2: 
+           case 2: state = "AK";
+           taxRate = 1.76;
        }
     }
 
