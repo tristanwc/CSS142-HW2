@@ -60,6 +60,7 @@ public class Driver {
     }
 
     public static double computeTax(Scanner input) {
+<<<<<<< HEAD
         System.out.println("Enter state abbrv.: ");
         String state = input.next().toUpperCase(); //Changes user input to uppercase to match case
         double taxRate = 15.0;
@@ -168,6 +169,16 @@ public class Driver {
                 System.out.println("You entered an invalid state.");
                 return 15.00;
         }
+=======
+       String state = input.next();
+       double taxRate = 15;
+       switch (taxRate) {
+           case 1: state = "AL";
+           taxRate = 9.10;
+           break;
+           case 2: 
+       }
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
     }
 
     public static double applyTax(double discountTotal, double tax) {
