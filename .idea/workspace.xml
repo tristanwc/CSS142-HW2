@@ -20,7 +20,10 @@
         <counts>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <entry key="project.closed" value="2" />
+=======
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
@@ -42,6 +45,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1478" />
+<<<<<<< HEAD
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -61,12 +65,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="3810" />
+=======
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="JAVA" value="3810" />
 =======
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
+=======
+          <entry key="JAVA" value="1478" />
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
         </counts>
       </usages-collector>
@@ -86,6 +96,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +123,10 @@
             <state relative-caret-position="411">
               <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
+=======
+            <state relative-caret-position="411">
+              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
             </state>
           </provider>
         </entry>
@@ -130,7 +145,10 @@
       <list>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
@@ -177,6 +195,7 @@
   </component>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539232157409" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Tristan-CSS142CHW1Q1" />
@@ -185,6 +204,8 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
+=======
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
@@ -246,6 +267,7 @@
   <component name="ToolWindowManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -258,11 +280,19 @@
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
+=======
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24945295" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
+=======
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
@@ -275,7 +305,11 @@
       <window_info anchor="bottom" id="Find" order="1" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33296824" />
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33296824" />
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
@@ -288,12 +322,18 @@
       <window_info anchor="bottom" id="TODO" order="6" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286334" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Theme Preview" />
+=======
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven Projects" />
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Palette&#9;" />
@@ -323,6 +363,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -339,6 +380,12 @@
         <state relative-caret-position="318">
           <caret line="50" column="73" lean-forward="true" selection-start-line="50" selection-start-column="73" selection-end-line="50" selection-end-column="73" />
 >>>>>>> 524b7c878d499bdd6e56d5c599cc10f8c61932d5
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+>>>>>>> parent of d8afd38... Added a switch case. Added gitignore
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
