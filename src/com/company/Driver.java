@@ -17,23 +17,12 @@ public class Driver {
 
         double tax = computeTax(input);
         System.out.println("The tax rate is " + tax);
-
-        double totalWithTax = applyTax(totalWithDiscount, tax);
-        System.out.println("The total with tax is " + totalWithTax);
-
-        double totalWithTip = computeAndApplyTip(input, totalWithTax);
-        System.out.println("The total with tip is " + totalWithTip);
-
-        double share = Math.round((totalWithTip / 4.0) * 100.0) / 100.0;
-        System.out.println("Everyone's share is " + share);
     }
-
     public static double computeTotal(Scanner input) {
         System.out.println("What is the total cost for the 4 meals?");
         double total = input.nextDouble();
         return total;
     }
-
     public static double computeDiscount(Scanner input) {
         System.out.println("Enter the pass phrase: ");
         double discount;
@@ -43,23 +32,21 @@ public class Driver {
         if (phrase.length() < 6 || phrase.length() > 6)
             return 0.03;
 
-        int val = (int) phrase.charAt(0);//Gets 1st Character ASCII Value
-        val += (int) phrase.charAt(1);   //Gets 2nd Character ASCII Value
-        val += (int) phrase.charAt(2);   //Gets 3rd Character ASCII Value
-        val += (int) phrase.charAt(3);   //Gets 4th Character ASCII Value
-        val += (int) phrase.charAt(4);   //Gets 5th Character ASCII Value
-        val += (int) phrase.charAt(5);   //Gets 6th Character ASCII Value
+        int val = (int)phrase.charAt(0);//Gets 1st Character ASCII Value
+        val += (int)phrase.charAt(1);   //Gets 2nd Character ASCII Value
+        val += (int)phrase.charAt(2);   //Gets 3rd Character ASCII Value
+        val += (int)phrase.charAt(3);   //Gets 4th Character ASCII Value
+        val += (int)phrase.charAt(4);   //Gets 5th Character ASCII Value
+        val += (int)phrase.charAt(5);   //Gets 6th Character ASCII Value
         discount = Math.round(val / 6.0); //Divides by average and rounds to nearest whole number
         discount = (discount % 10) / 100;
         return discount;
     }
-
     public static double applyDiscount(double total, double percentage) {
-        total = total * (1 - percentage); //Returns total by discount multiplier
-        return Math.round(total * 100.00) / 100.00;
+        return total * (1 - percentage); //Returns total by discount multiplier
     }
-
     public static double computeTax(Scanner input) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         System.out.println("Enter state abbrv.: ");
         String state = input.next().toUpperCase(); //Changes user input to uppercase to match case
@@ -172,58 +159,23 @@ public class Driver {
 =======
        String state = input.next();
        double taxRate = 15;
+=======
+       String state = input.next();
+       double taxRate = 15.0;
+>>>>>>> parent of 524b7c8... Finished [Check it]
        switch (taxRate) {
            case 1: state = "AL";
            taxRate = 9.10;
            break;
+<<<<<<< HEAD
            case 2: 
        }
 >>>>>>> parent of d8afd38... Added a switch case. Added gitignore
+=======
+           case 2: state = "AK";
+           taxRate = 1.76;
+       }
+>>>>>>> parent of 524b7c8... Finished [Check it]
     }
 
-    public static double applyTax(double discountTotal, double tax) {
-        discountTotal = discountTotal * (1.00 + (tax / 100.00)); //Calculates state tax to current amount
-        return Math.round(discountTotal * 100.0) / 100.0;
-    }
-
-    public static double computeAndApplyTip(Scanner input, double totalDiscountTax) {
-        System.out.println("Type 'p' to add a percentage tip or 'a' for an absolute num tip: ");
-        char c = input.next().charAt(0);
-        double tip;
-        if (c == 'p' || c == 'P') {
-            tip = computeTip(input, totalDiscountTax); //Calls overload a method
-            totalDiscountTax = totalDiscountTax * (1.00 + tip);
-            totalDiscountTax = Math.round(totalDiscountTax * 100.00) / 100.00; //calculates total with tip
-            return totalDiscountTax;
-        } else if (c == 'a' || c == 'A') {
-            tip = computeTip(input); //Gets absolute tip amount
-            return (totalDiscountTax + tip); //adds real number tip into total
-        } else { //Invalid input
-            System.out.println("You entered an invalid char, the tip is set to 18%");
-            return 0.18;
-        }
-    }
-
-    public static double computeTip(Scanner a, double currAmount) {
-        System.out.println("Enter tip percentage: ");
-        double val = a.nextDouble();
-        if (val < 0 || val > 100) {
-            val = 0.25;
-            System.out.println("Invalid tip percent, it is set to 25%");
-            return val;
-        } else {
-            val /= 100;
-            val = Math.round(val * 100.00) / 100.00;
-            System.out.println(val);
-            return val;
-        }
-
-    }
-
-    public static double computeTip(Scanner b) {
-        System.out.println("Enter tip amount (abs val): ");
-        double val = b.nextDouble();
-        val = Math.round(val * 100.00) / 100;
-        return val;
-    }
 }
