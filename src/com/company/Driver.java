@@ -30,27 +30,25 @@ public class Driver {
 
     public static double computeTotal(Scanner input) {
         System.out.println("What is the total cost for the 4 meals?");
-        double total = input.nextDouble();
+        double total = input.nextDouble(); //Gets input for total
         return total;
     }
 
     public static double computeDiscount(Scanner input) {
         System.out.println("Enter the pass phrase: ");
         double discount;
-        String phrase = input.next();
+        int val = 0;
+        String phrase = input.next(); //Gets phrasekey
 
         //If phrase is not 6 characters exactly, returns 3%
         if (phrase.length() < 6 || phrase.length() > 6)
             return 0.03;
 
-        int val = (int) phrase.charAt(0);//Gets 1st Character ASCII Value
-        val += (int) phrase.charAt(1);   //Gets 2nd Character ASCII Value
-        val += (int) phrase.charAt(2);   //Gets 3rd Character ASCII Value
-        val += (int) phrase.charAt(3);   //Gets 4th Character ASCII Value
-        val += (int) phrase.charAt(4);   //Gets 5th Character ASCII Value
-        val += (int) phrase.charAt(5);   //Gets 6th Character ASCII Value
+        for (int i = 0; i < 6; i++) { //Gets all indexes for Character ASCII Value
+            val += (int) phrase.charAt(i);
+        }
         discount = Math.round(val / 6.0); //Divides by average and rounds to nearest whole number
-        discount = (discount % 10) / 100;
+        discount = (discount % 10) / 100; //Formula to get discount from documentation
         return discount;
     }
 
@@ -62,7 +60,6 @@ public class Driver {
     public static double computeTax(Scanner input) {
         System.out.println("Enter state abbrv.: ");
         String state = input.next().toUpperCase(); //Changes user input to uppercase to match case
-        double taxRate = 15.0;
         switch (state) {    //Any state with 0 tax rate has no sales tax
             case "AL":
                 return 9.10;
@@ -176,10 +173,10 @@ public class Driver {
     }
 
     public static double computeAndApplyTip(Scanner input, double totalDiscountTax) {
-        System.out.println("Type 'p' to add a percentage tip or 'a' for an absolute num tip: ");
-        char c = input.next().charAt(0);
+        System.out.println("Type 'p' to add a percentage tip or 'a' for an absolute num tip: "); //Asks user to type p or a for type of tip
+        char c = input.next().charAt(0); //Gets first char from user input
         double tip;
-        if (c == 'p' || c == 'P') {
+        if (c == 'p' || c == 'P') { //Checks for both lower and uppercase
             tip = computeTip(input, totalDiscountTax); //Calls overload a method
             totalDiscountTax = totalDiscountTax * (1.00 + tip);
             totalDiscountTax = Math.round(totalDiscountTax * 100.00) / 100.00; //calculates total with tip
@@ -194,24 +191,25 @@ public class Driver {
     }
 
     public static double computeTip(Scanner a, double currAmount) {
-        System.out.println("Enter tip percentage: ");
+        System.out.println("Enter tip percentage: "); //Asks for a percentage
         double val = a.nextDouble();
-        if (val < 0 || val > 100) {
-            val = 0.25;
+        if (val < 0 || val > 100) { //If tip is greater than 100% or less than 0%
+            val = 0.25; //Sets to 25%
             System.out.println("Invalid tip percent, it is set to 25%");
             return val;
         } else {
             val /= 100;
             val = Math.round(val * 100.00) / 100.00;
-            System.out.println(val);
             return val;
         }
-
     }
 
     public static double computeTip(Scanner b) {
-        System.out.println("Enter tip amount (abs val): ");
+        System.out.println("Enter tip amount (abs val): "); //Asks for real number absolute tip
         double val = b.nextDouble();
+        if (val < 0 || val > 100)
+            return 25; //Sets to 25
+
         val = Math.round(val * 100.00) / 100;
         return val;
     }
