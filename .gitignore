@@ -66,8 +66,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 .idea/vcs.xml
 .idea/workspace.xml
-<<<<<<< HEAD
-=======
 .idea/workspace.xml
 
 mv .idea ../.idea_backup
@@ -75,4 +73,3 @@ rm .idea # in case you forgot to close your IDE
 git rm -r .idea 
 git commit -m "Remove .idea from repo"
 mv ../.idea_backup .idea
->>>>>>> 7ca992323e2d666ce990ef60f84aa31a4db4fb6b
