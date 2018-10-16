@@ -6,24 +6,31 @@ public class Driver {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in); //Gets input
 
+        //Asks user for total cost of meals
         double total = computeTotal(input);
         System.out.println("The total is cost for the 4 meals is " + total);
 
+        //Uses a phrasekey to get discount percent
         double discountPercentage = computeDiscount(input);
         System.out.println("The discount percentage is " + discountPercentage);
 
+        //Uses the discount percent and calculates new total
         double totalWithDiscount = applyDiscount(total, discountPercentage);
         System.out.println("The total with discount is " + totalWithDiscount);
 
+        //Computes tax percent with state abbreviation
         double tax = computeTax(input);
         System.out.println("The tax rate is " + tax);
 
+        //Computes total with tax percent
         double totalWithTax = applyTax(totalWithDiscount, tax);
         System.out.println("The total with tax is " + totalWithTax);
 
+        //Get's users tip type and value/percent
         double totalWithTip = computeAndApplyTip(input, totalWithTax);
         System.out.println("The total with tip is " + totalWithTip);
 
+        //Divides final total by four
         double share = Math.round((totalWithTip / 4.0) * 100.0) / 100.0;
         System.out.println("Everyone's share is " + share);
     }
@@ -210,7 +217,7 @@ public class Driver {
         if (val < 0 || val > 100)
             return 25; //Sets to 25
 
-        val = Math.round(val * 100.00) / 100;
+        val = Math.round(val * 100.00) / 100.00;
         return val;
     }
 }
