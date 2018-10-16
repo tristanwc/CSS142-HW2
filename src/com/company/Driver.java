@@ -36,9 +36,14 @@ public class Driver {
     }
 
     public static double computeTotal(Scanner input) {
-        System.out.println("What is the total cost for the 4 meals?");
-        double total = input.nextDouble(); //Gets input for total
-        return total;
+        double val = 0;
+        double tempVal = 0;
+        for (int i = 1; i <= 4; i++) {
+            System.out.println("What is the cost for Meal #" + i); //Asks user to input meal cost
+            tempVal = input.nextDouble();
+            val = val + tempVal;
+        }
+        return val;
     }
 
     public static double computeDiscount(Scanner input) {
@@ -180,19 +185,19 @@ public class Driver {
     }
 
     public static double computeAndApplyTip(Scanner input, double totalDiscountTax) {
-        System.out.println("Type 'p' to add a percentage tip or 'a' for an absolute num tip: "); //Asks user to type p or a for type of tip
-        char c = input.next().charAt(0); //Gets first char from user input
+        System.out.println("Type 'p' or 'percentage' to add a percentage tip or 'a' or 'absolute' for an absolute num tip: "); //Asks user to type p or a for type of tip
+        String c = input.next(); //Gets first char from user input
         double tip;
-        if (c == 'p' || c == 'P') { //Checks for both lower and uppercase
+        if (c.equalsIgnoreCase("p") || c.equalsIgnoreCase("percentage")) { //Checks for both lower and uppercase
             tip = computeTip(input, totalDiscountTax); //Calls overload a method
             totalDiscountTax = totalDiscountTax * (1.00 + tip);
             totalDiscountTax = Math.round(totalDiscountTax * 100.00) / 100.00; //calculates total with tip
             return totalDiscountTax;
-        } else if (c == 'a' || c == 'A') {
+        } else if (c.equalsIgnoreCase("A") || c.equalsIgnoreCase("absolute")) {
             tip = computeTip(input); //Gets absolute tip amount
             return (totalDiscountTax + tip); //adds real number tip into total
         } else { //Invalid input
-            System.out.println("You entered an invalid char, the tip is set to 18%");
+            System.out.println("You entered an invalid case, the tip is set to 18%");
             return 0.18;
         }
     }
@@ -215,7 +220,7 @@ public class Driver {
         System.out.println("Enter tip amount (abs val): "); //Asks for real number absolute tip
         double val = b.nextDouble();
         if (val < 0 || val > 100)
-            return 25; //Sets to 25
+            return 25; //Returns 25
 
         val = Math.round(val * 100.00) / 100.00;
         return val;
