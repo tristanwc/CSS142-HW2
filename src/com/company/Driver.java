@@ -1,5 +1,6 @@
 package com.company;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Driver {
@@ -53,9 +54,10 @@ public class Driver {
         String phrase = input.next(); //Gets phrasekey
 
         //If phrase is not 6 characters exactly, returns 3%
-        if (phrase.length() < 6 || phrase.length() > 6)
+        if (phrase.length() < 6 || phrase.length() > 6) {
+            System.out.println("Passphrase is not 6 characters long. [Defaulting to 3%]");
             return 0.03;
-
+        }
         for (int i = 0; i < 6; i++) { //Gets all indexes for Character ASCII Value
             val += (int) phrase.charAt(i);
         }
@@ -174,7 +176,10 @@ public class Driver {
             case "WY":       //50th state
                 return 5.46;
             default:
-                System.out.println("You entered an invalid state.");
+                if (state.length() > 2 || state.length() < 2) //Conditional to print a different error is the state character length exceeds or is too small
+                    System.out.println("Invalid state code. State code should only be 2 characters long. [Defaulting to 15%]");
+                else
+                System.out.println("Invalid state code. [Defaulting to 15%]");
                 return 15.00;
         }
     }
@@ -195,10 +200,15 @@ public class Driver {
             return totalDiscountTax;
         } else if (c.equalsIgnoreCase("A") || c.equalsIgnoreCase("absolute")) {
             tip = computeTip(input); //Gets absolute tip amount
+            System.out.println("The tip amount is " + tip);
             return (totalDiscountTax + tip); //adds real number tip into total
-        } else { //Invalid input
-            System.out.println("You entered an invalid case, the tip is set to 18%");
-            return 0.18;
+        } else { //Invalid input, sets to 18%
+            System.out.println("Invalid choice. Defaulting to total tip of 18%");
+            System.out.println("The tip amount is " + Math.round((totalDiscountTax * 0.18) * 100.00) / 100.00);
+            totalDiscountTax = totalDiscountTax * (1.00 + 0.18);
+            totalDiscountTax = Math.round(totalDiscountTax * 100.00) / 100.00;
+            return totalDiscountTax;
+
         }
     }
 
@@ -208,10 +218,14 @@ public class Driver {
         if (val < 0 || val > 100) { //If tip is greater than 100% or less than 0%
             val = 0.25; //Sets to 25%
             System.out.println("Invalid tip percent, it is set to 25%");
+            System.out.println("The tip amount is " + (currAmount * 0.25));
             return val;
         } else {
             val /= 100;
             val = Math.round(val * 100.00) / 100.00;
+            currAmount *= val;
+            currAmount = Math.round(currAmount * 100.00) / 100.00;
+            System.out.println("The tip amount is " + (currAmount));
             return val;
         }
     }
@@ -219,9 +233,10 @@ public class Driver {
     public static double computeTip(Scanner b) {
         System.out.println("Enter tip amount (abs val): "); //Asks for real number absolute tip
         double val = b.nextDouble();
-        if (val < 0 || val > 100)
+        if (val < 0 || val > 100) { //If input is less than 0 or greater than 100, defaults to $25
+            System.out.println("Invalid absolute tip. Defaulting tip to $25");
             return 25; //Returns 25
-
+        }
         val = Math.round(val * 100.00) / 100.00;
         return val;
     }
