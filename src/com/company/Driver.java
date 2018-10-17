@@ -48,9 +48,12 @@ public class Driver {
     /* Computes a discount percentage using the ASCII table character value */
     public static double computeDiscount(Scanner input) {
         System.out.println("Enter the pass phrase: ");
-        double discount; //Variables declared and initialized
+        //Variables declared and with val initialized
+        double discount;
         int val = 0;
-        String phrase = input.next(); //Gets phrasekey
+
+        //Gets phrase key
+        String phrase = input.next();
 
         //If phrase is not 6 characters exactly, returns 3%
         if (phrase.length() < 6 || phrase.length() > 6) {
@@ -58,7 +61,7 @@ public class Driver {
             return 0.03;
         }
         for (int i = 0; i < 6; i++) { //Gets all indexes for Character ASCII Value
-            val += (int) phrase.charAt(i);
+            val += (int) phrase.charAt(i); //Adds all character values into a total
         }
         discount = Math.round(val / 6.0); //Divides by average and rounds to nearest whole number
         discount = (discount % 10) / 100; //Formula to get discount from documentation
@@ -209,7 +212,6 @@ public class Driver {
             return totalDiscountTax;
         } else if (c.equalsIgnoreCase("A") || c.equalsIgnoreCase("absolute")) {
             tip = computeTip(input); //Gets absolute tip amount
-            System.out.println("The tip amount is " + tip);
             //Adds real (abs) number tip into total
             return (totalDiscountTax + tip);
         } else { //Invalid input, sets to 18%
@@ -244,12 +246,15 @@ public class Driver {
         //Asks for real number absolute tip
         System.out.println("Enter tip amount (abs val): ");
         double val = b.nextDouble();
+
         //If input is less than 0 or greater than 100, defaults to $25
         if (val < 0 || val > 100) {
             System.out.println("Invalid absolute tip. Defaulting tip to $25");
-            return 25; //Returns 25
+            System.out.println("The tip amount is " + 25.00);
+            return 25.00; //Returns 25
         }
         val = Math.round(val * 100.00) / 100.00;
+        System.out.println("The tip amount is " + val);
         return val;
     }
 }
